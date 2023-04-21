@@ -19,7 +19,7 @@ function ReusableForm(props) {
 
         <Form.Group controlId="price">
           <Form.Label></Form.Label>
-          <Form.Control type="text" placeholder="Enter price" />
+          <Form.Control type="number" step="0.01" placeholder="Enter price" />
         </Form.Group>
 
         <Button variant="primary" type="submit" style={{margin: '10px'}}>{props.buttonText}</Button>
