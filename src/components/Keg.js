@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+// import Toast from 'react-bootstrap/Toast';
 
 
 function Keg({ name, brand, price, kegId }) {
@@ -17,9 +18,9 @@ function Keg({ name, brand, price, kegId }) {
         <li>Name: {name}</li>
         <li>Brand: {brand}</li>
         <li>Price: ${price}</li>
-        <li>Remaining Pints: {kegCount}</li>
+        <li>Remaining Pints: {pintCount}</li>
       </ul>
-      <button onClick={bottomsUp} disabled={kegCount === 0}>
+      <button onClick={bottomsUp} disabled={pintCount === 0}>
         Bottoms up!
       </button>
     </div>
