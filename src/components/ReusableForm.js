@@ -19,11 +19,6 @@ function ReusableForm(props) {
 
         <Form.Group controlId="price">
           <Form.Label></Form.Label>
-          <Form.Control type="text" placeholder="Enter sighting location" />
-        </Form.Group>
-
-        <Form.Group controlId="price">
-          <Form.Label></Form.Label>
           <Form.Control type="text" placeholder="Enter price" />
         </Form.Group>
 
