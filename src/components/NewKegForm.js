@@ -16,13 +16,13 @@ function NewKegForm(props){
     });
 }
 
-  return (
-    <React.Fragment>
-      <ReusableForm
-        formSubmissionHandler={handleNewKegFormSubmission}
-        buttonText={<Button variant="primary" style={{margin: '10px'}}>Add brew</Button>} />
-    </React.Fragment>   
-  );
+return (
+  <React.Fragment>
+    <ReusableForm
+      formSubmissionHandler={handleNewKegFormSubmission}
+      buttonText="Add brew" />
+  </React.Fragment>   
+);
 }
 
 NewKegForm.propTypes = {
