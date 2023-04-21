@@ -1,7 +1,7 @@
 import React from "react";
 import NewKegForm from "./NewKegForm";
 import KegList from "./KegList";
-import KegDetail from "./KegDetail";
+import KegDetails from "./KegDetails";
 import EditKegForm from "./EditKegForm";
 import Button from 'react-bootstrap/Button';
 
@@ -74,7 +74,7 @@ class KegControl extends React.Component {
       currentlyVisibleState = <EditKegForm keg={this.state.selectedKeg} onEditKeg={this.handleEditingKegInList} />;
       buttonText = "Return to Keg List";
     } else if (this.state.selectedKeg != null) {
-      currentlyVisibleState = <KegDetail keg={this.state.selectedKeg} onClickingDelete={this.handleDeletingKeg} onClickingEdit={this.handleEditClick} />
+      currentlyVisibleState = <KegDetails keg={this.state.selectedKeg} onClickingDelete={this.handleDeletingKeg} onClickingEdit={this.handleEditClick} />
       buttonText = "Return to Keg List";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />;
