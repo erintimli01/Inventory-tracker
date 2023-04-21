@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import Button from 'react-bootstrap/Button';
 import Toast from 'react-bootstrap/Toast';
 
 function Keg(props) {
@@ -27,9 +28,9 @@ function Keg(props) {
         </Toast.Header>
       </Toast>
 
-      <button onClick={bottomsUp} disabled={pintCount === 0}>
+      <Button variant="primary" onClick={bottomsUp} disabled={pintCount === 0}>
         Bottoms up!
-      </button>
+      </Button>
     </div>
   );
 }
