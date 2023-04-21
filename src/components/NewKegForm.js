@@ -6,9 +6,9 @@ import Button from 'react-bootstrap/Button';
 
 function NewKegForm(props){
 
-  function handleNewBirdFormSubmission(event) {
+  function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    props.onNewBirdCreation({
+    props.onNewKegCreation({
       name: event.target.name.value,
       brand: event.target.brand.value,
       price: event.target.price.value,
@@ -19,14 +19,14 @@ function NewKegForm(props){
   return (
     <React.Fragment>
       <ReusableForm
-        formSubmissionHandler={handleNewBirdFormSubmission}
+        formSubmissionHandler={handleNewKegFormSubmission}
         buttonText={<Button variant="primary" style={{margin: '10px'}}>Add brew</Button>} />
     </React.Fragment>   
   );
 }
 
-NewBirdForm.propTypes = {
-  onNewBirdCreation: PropTypes.func
+NewKegForm.propTypes = {
+  onNewKegCreation: PropTypes.func
 };
 
-export default NewBirdForm;
+export default NewKegForm;
