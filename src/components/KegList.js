@@ -1,35 +1,42 @@
 import React from "react";
 import Keg from "./Keg";
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function KegList(props) {
   const { kegList } = props;
 
   return (
-    <div>
+    <React.Fragment>
+   <Row>
       <h2>Pierre's Brews</h2>
       {kegList.map((keg) => (
+   <Col md={4} className="mb-4">
         <Keg
+        whenKegClicked = { props.onKegSelection }
         name={keg.name}
         brand={keg.brand}
         price={keg.price}
-        kegId={keg.id}
+        id={keg.id}
         // pintCount={keg.pintCount} //add pint count
-        key={keg.id}
-        />
+        key={keg.id} />
+        </Col>
       ))}
-    </div>
+      </Row>
+    </React.Fragment>
   );
 }
 
 KegList.propTypes = {
-  kegList: propTypes.arrayOf(
-    propTypes.shape({
-      name: propTypes.string.isRequired,
-      brand: propTypes.string.isRequired,
-      price: propTypes.number.isRequired,
-      id: propTypes.string.isRequired,
+  kegList: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      brand: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       // pintCount: propTypes.number.isRequired, //Add pintCount 
+      onKegSelection: PropTypes.func
     })
   ),
 };
