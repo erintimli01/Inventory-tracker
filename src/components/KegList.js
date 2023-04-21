@@ -34,7 +34,8 @@ KegList.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       brand: PropTypes.string.isRequired,
-      price: PropTypes.number.isRequired,
+      // price: PropTypes.number.isRequired,
+      price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
       id: PropTypes.string.isRequired,
       // pintCount: propTypes.number.isRequired, //Add pintCount 
       onKegSelection: PropTypes.func
