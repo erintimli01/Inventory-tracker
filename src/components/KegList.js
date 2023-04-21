@@ -14,7 +14,7 @@ function KegList(props) {
         brand={keg.brand}
         price={keg.price}
         kegId={keg.id}
-        pintCount={keg.pintCount} //add pint count
+        // pintCount={keg.pintCount} //add pint count
         key={keg.id}
         />
       ))}
@@ -29,7 +29,7 @@ KegList.propTypes = {
       brand: propTypes.string.isRequired,
       price: propTypes.number.isRequired,
       id: propTypes.string.isRequired,
-      pintCount: propTypes.number.isRequired, //Add pintCount 
+      // pintCount: propTypes.number.isRequired, //Add pintCount 
     })
   ),
 };
