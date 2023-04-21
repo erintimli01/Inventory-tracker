@@ -11,6 +11,7 @@ function KegDetails(props) {
             <h3>Keg Name: {keg.name}</h3>
             <h3>Brand: {keg.brand}</h3>
             <h3>Price: ${keg.price}</h3>
+            {/* <h3>Remaining Pints: {keg.pintCount}</h3> */}
             <Button variant="primary" onClick={props.onClickingEdit} style={{margin: '10px'}}>Update Keg Details</Button>{' '}
             <Button variant="danger" onClick={() => onClickingDelete(keg.id)} style={{margin: '10px'}}>Delete Keg</Button>
             <hr />
