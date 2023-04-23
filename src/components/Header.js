@@ -1,4 +1,5 @@
 import React from "react";
+import DonutsBeer1 from "./../img/DonutsBeer1.jpg"
 
 function Header() {
   return(
