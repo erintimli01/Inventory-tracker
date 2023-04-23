@@ -9,19 +9,18 @@ function KegList(props) {
 
   return (
     <React.Fragment>
-   <Row>
-      <h2>Pierre's Brews</h2>
-      {kegList.map((keg) => (
-   <Col md={4} className="mb-4">
+      <Row>
+        {kegList.map((keg) => (
+        <Col md={4} className="mb-4">
         <Keg
-        whenKegClicked = { props.onKegSelection }
-        name={keg.name}
-        brand={keg.brand}
-        price={keg.price}
-      
-        id={keg.id}
-        // pintCount={keg.pintCount} //add pint count
-        key={keg.id} />
+          whenKegClicked = { props.onKegSelection }
+          name={keg.name}
+          brand={keg.brand}
+          price={keg.price}
+        
+          id={keg.id}
+          // pintCount={keg.pintCount} //add pint count
+          key={keg.id} />
         </Col>
       ))}
       </Row>

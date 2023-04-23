@@ -18,12 +18,12 @@ function Keg(props) {
       <Toast className="mb-4">
         <Toast.Header closeButton={false}>
           <div onClick={() => props.whenKegClicked(props.id)}>
-            <ul>
-              <li>Name: {props.name}</li>
-              <li>Brand: {props.brand}</li>
-              <li>Price: ${props.price}</li>
-              <li>Remaining Pints: {pintCount}</li>
-            </ul>
+
+              <h3><strong>Name:</strong> {props.name}</h3>
+              <p><strong>Brand: </strong>{props.brand}</p>
+              <p><strong>Price: </strong>${props.price}</p>
+              <p><strong>Remaining Pints: </strong>{pintCount}</p> 
+
           </div>
         </Toast.Header>
       </Toast>
